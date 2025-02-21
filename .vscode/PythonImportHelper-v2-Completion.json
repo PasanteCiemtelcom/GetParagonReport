@@ -1,0 +1,206 @@
+[
+    {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "AuthResponseModel",
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "isExtraImport": true,
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "AuthService",
+        "importPath": "src.services.authService",
+        "description": "src.services.authService",
+        "isExtraImport": true,
+        "detail": "src.services.authService",
+        "documentation": {}
+    },
+    {
+        "label": "ParagonService",
+        "importPath": "src.services.paragonService",
+        "description": "src.services.paragonService",
+        "isExtraImport": true,
+        "detail": "src.services.paragonService",
+        "documentation": {}
+    },
+    {
+        "label": "Scope",
+        "kind": 6,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "class Scope:\n    id: UUID\n    name: str\n    display_name: str\n    type: str\n    def __init__(self, id: UUID, name: str, display_name: str, type: str) -> None:\n        self.id = id\n        self.name = name\n        self.display_name = display_name\n        self.type = type",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "Token",
+        "kind": 6,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "class Token:\n    user_id: UUID\n    user_name: str\n    iat: int\n    exp: int\n    unique_identifier: str\n    identity_provider_type: str\n    def __init__(self, user_id: UUID, user_name: str, iat: int, exp: int, unique_identifier: str, identity_provider_type: str) -> None:\n        self.user_id = user_id\n        self.user_name = user_name",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "AuthResponseModel",
+        "kind": 6,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "class AuthResponseModel:\n    status: str\n    user_id: UUID\n    id_token: str\n    token: Token\n    scopes: List[Scope]\n    identity_provider_type: str\n    def __init__(self, status: str, user_id: UUID, id_token: str, token: Token, scopes: List[Scope], identity_provider_type: str) -> None:\n        self.status = status\n        self.user_id = user_id",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "from_str",
+        "kind": 2,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "def from_str(x: Any) -> str:\n    assert isinstance(x, str)\n    return x\ndef from_list(f: Callable[[Any], T], x: Any) -> List[T]:\n    assert isinstance(x, list)\n    return [f(y) for y in x]\ndef to_class(c: Type[T], x: Any) -> dict:\n    assert isinstance(x, c)\n    return cast(Any, x).to_dict()\nclass Scope:",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "from_list",
+        "kind": 2,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "def from_list(f: Callable[[Any], T], x: Any) -> List[T]:\n    assert isinstance(x, list)\n    return [f(y) for y in x]\ndef to_class(c: Type[T], x: Any) -> dict:\n    assert isinstance(x, c)\n    return cast(Any, x).to_dict()\nclass Scope:\n    id: UUID\n    name: str\n    display_name: str",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "to_class",
+        "kind": 2,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "def to_class(c: Type[T], x: Any) -> dict:\n    assert isinstance(x, c)\n    return cast(Any, x).to_dict()\nclass Scope:\n    id: UUID\n    name: str\n    display_name: str\n    type: str\n    def __init__(self, id: UUID, name: str, display_name: str, type: str) -> None:\n        self.id = id",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "auth_response_model_from_dict",
+        "kind": 2,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "def auth_response_model_from_dict(s: Any) -> AuthResponseModel:\n    return AuthResponseModel.from_dict(s)\ndef auth_response_model_to_dict(x: AuthResponseModel) -> Any:\n    return to_class(AuthResponseModel, x)",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "auth_response_model_to_dict",
+        "kind": 2,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "def auth_response_model_to_dict(x: AuthResponseModel) -> Any:\n    return to_class(AuthResponseModel, x)",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "T",
+        "kind": 5,
+        "importPath": "src.models.authResponseModel",
+        "description": "src.models.authResponseModel",
+        "peekOfCode": "T = TypeVar(\"T\")\ndef from_str(x: Any) -> str:\n    assert isinstance(x, str)\n    return x\ndef from_list(f: Callable[[Any], T], x: Any) -> List[T]:\n    assert isinstance(x, list)\n    return [f(y) for y in x]\ndef to_class(c: Type[T], x: Any) -> dict:\n    assert isinstance(x, c)\n    return cast(Any, x).to_dict()",
+        "detail": "src.models.authResponseModel",
+        "documentation": {}
+    },
+    {
+        "label": "AuthService",
+        "kind": 6,
+        "importPath": "src.services.authService",
+        "description": "src.services.authService",
+        "peekOfCode": "class AuthService:\n    def __init__(self, user: str, password: str):\n        self.user = user\n        self.password = password\n        self.url = \"https://10.117.43.137/iam/authenticate\"\n        self.headers = {\n            'Accept': '*/*',\n            'Accept-Encoding': 'gzip, deflate, br, zstd',\n            'Accept-Language': 'en-US,en;q=0.9',\n            'Origin': 'https://10.117.43.137',",
+        "detail": "src.services.authService",
+        "documentation": {}
+    },
+    {
+        "label": "ParagonService",
+        "kind": 6,
+        "importPath": "src.services.paragonService",
+        "description": "src.services.paragonService",
+        "peekOfCode": "class ParagonService:\n    def __init__(self, id_token: str):\n        self.url = \"https://10.117.43.137/traffic-engineering/api/topology/v2/1\"\n        self.headers = self.headers = {\n            'Accept': 'application/json, text/plain, */*',\n            'Accept-Language': 'en-US,en;q=0.9',\n            'Connection': 'keep-alive',\n            'Referer': 'https://10.117.43.137/nstopo/topology',\n            'Sec-Fetch-Dest': 'empty',\n            'Sec-Fetch-Mode': 'cors',",
+        "detail": "src.services.paragonService",
+        "documentation": {}
+    }
+]
